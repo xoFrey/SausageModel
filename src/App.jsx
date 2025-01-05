@@ -7,9 +7,14 @@ import Experience from "./components/Experience";
 
 function App() {
   return (
-    <Canvas camera={{ fov: 64, position: [2.3, 6, 2.3] }}>
-      <Experience />
-    </Canvas>
+    <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
+      <Canvas
+        style={{ background: "white", height: "100%", width: "100%" }}
+        camera={{ position: [5, 5, 5], fov: 60 }} // Optional: Set the camera position
+      >
+        <Experience />
+      </Canvas>
+    </div>
   );
 }
 
