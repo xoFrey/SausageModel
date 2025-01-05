@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Sausage } from "./Sausage.jsx";
 import { AmbientLight } from "three";
 import { useRef, useEffect } from "react";
@@ -37,8 +37,15 @@ const Experience = () => {
         position={[-5, 3, -4]}
       />
 
-      <OrbitControls />
-      <Sausage />
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
+      <ScrollControls damping={0.25}>
+        <Sausage />
+      </ScrollControls>
     </>
   );
 };
