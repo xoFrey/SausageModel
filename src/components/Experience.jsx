@@ -31,7 +31,6 @@ const Experience = () => {
         position={[7, 3, 7]}
       />
       <spotLight
-        ref={spotLightRef}
         intensity={50}
         distance={10}
         angle={0.5}
