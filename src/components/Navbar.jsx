@@ -2,7 +2,7 @@ const Navbar = ({ isActive, setIsActive, setIsClicked, isClicked }) => {
   const handleOnClick = (model) => {
     setTimeout(() => {
       setIsActive(model);
-    }, 900);
+    }, 500);
     setIsClicked(model);
   };
 

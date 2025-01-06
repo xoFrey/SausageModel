@@ -42,19 +42,19 @@ nav p {
 }
 
 .experience {
-  animation: slideInLeft 2s forwards;
+  animation: slideInLeft 1s;
 }
 
 .ghost {
-  animation: slideInLeft 2s;
+  animation: slideInLeft 1s;
 }
 
 .ghostExit {
-  animation: slideOutRight 2s;
+  animation: slideOutRight 2s ease;
 }
 
 .sausageExit {
-  animation: slideOutRight 2s;
+  animation: slideOutRight 2s ease;
 }
 
 @keyframes slideInLeft {
@@ -74,7 +74,7 @@ nav p {
     opacity: 1;
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(150%);
     opacity: 0;
   }
 }
