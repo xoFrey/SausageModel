@@ -82,3 +82,19 @@ nav p {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.arrowleft {
+  position: absolute;
+  top: 90vh;
+  left: 20vw;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.arrowright {
+  position: absolute;
+  top: 90vh;
+  right: 20vw;
+  cursor: pointer;
+  z-index: 5;
+}
