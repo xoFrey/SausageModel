@@ -5,22 +5,22 @@ import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 const Experience = () => {
-  const spotLightRef = useRef();
-  const helperRef = useRef();
+  // const spotLightRef = useRef();
+  // const helperRef = useRef();
 
-  useEffect(() => {
-    if (spotLightRef.current) {
-      helperRef.current = new THREE.SpotLightHelper(spotLightRef.current);
-      spotLightRef.current.parent.add(helperRef.current);
-    }
+  // useEffect(() => {
+  //   if (spotLightRef.current) {
+  //     helperRef.current = new THREE.SpotLightHelper(spotLightRef.current);
+  //     spotLightRef.current.parent.add(helperRef.current);
+  //   }
 
-    return () => {
-      if (helperRef.current) {
-        helperRef.current.removeFromParent();
-        helperRef.current.dispose();
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (helperRef.current) {
+  //       helperRef.current.removeFromParent();
+  //       helperRef.current.dispose();
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
@@ -41,6 +41,7 @@ const Experience = () => {
         enablePan={false}
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
+        enableZoom={false}
       />
 
       <Sausage />

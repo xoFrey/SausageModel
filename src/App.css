@@ -15,9 +15,26 @@ html {
   z-index: 1;
 }
 
-.experience {
+.experience,
+.ghost {
+  position: absolute;
   height: 100vh;
   width: 100vw;
-  position: absolute;
   z-index: 2;
+}
+
+nav {
+  position: absolute;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+nav p {
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 5;
 }

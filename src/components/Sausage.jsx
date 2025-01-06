@@ -15,6 +15,7 @@ export function Sausage(props) {
 
   return (
     <group
+      position={[0, 1, 0]}
       ref={ref}
       {...props}
       dispose={null}>
