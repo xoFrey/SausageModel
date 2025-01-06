@@ -15,14 +15,6 @@ html {
   z-index: 1;
 }
 
-.experience,
-.ghost {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 2;
-}
-
 nav {
   position: absolute;
   top: 50vh;
@@ -37,4 +29,56 @@ nav p {
   font-size: 40px;
   cursor: pointer;
   z-index: 5;
+}
+
+.experience,
+.ghost {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.experience {
+  animation: slideInLeft 2s forwards;
+}
+
+.ghost {
+  animation: slideInLeft 2s;
+}
+
+.ghostExit {
+  animation: slideOutRight 2s;
+}
+
+.sausageExit {
+  animation: slideOutRight 2s;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

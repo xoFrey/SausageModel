@@ -11,11 +11,18 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [isActive, setIsActive] = useState("sausage");
+  3;
+  const [isClicked, setIsClicked] = useState("");
+
+  console.log(isClicked);
+
   return (
     <>
       <Navbar
         isActive={isActive}
         setIsActive={setIsActive}
+        setIsClicked={setIsClicked}
+        isClicked={isClicked}
       />
       <div className='canvas'>
         <div className='stars'>
@@ -25,13 +32,17 @@ function App() {
         </div>
 
         {isActive == "sausage" ? (
-          <div className='experience'>
+          <div
+            className={`${
+              isClicked == "ghost" ? "sausageExit" : ""
+            } experience `}>
             <Canvas camera={{ position: [5, 5, 5], fov: 60 }}>
               <Experience />
             </Canvas>
           </div>
         ) : (
-          <div className='ghost'>
+          <div
+            className={`${isClicked == "sausage" ? "ghostExit" : ""} ghost `}>
             <Canvas>
               <ambientLight intensity={1.2} />
               <spotLight
@@ -45,12 +56,12 @@ function App() {
                 angle={0.5}
                 position={[-5, 3, -4]}
               />
-              <OrbitControls
+              {/* <OrbitControls
                 enablePan={false}
                 maxPolarAngle={Math.PI / 2}
                 minPolarAngle={Math.PI / 2}
                 enableZoom={false}
-              />
+              /> */}
               <Ghost scale={3} />
             </Canvas>
           </div>
