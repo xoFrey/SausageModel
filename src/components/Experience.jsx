@@ -42,9 +42,8 @@ const Experience = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
       />
-      {/* <ScrollControls damping={0.25}> */}
+
       <Sausage />
-      {/* </ScrollControls> */}
     </>
   );
 };

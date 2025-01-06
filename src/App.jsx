@@ -4,16 +4,24 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
+import Stars from "./components/Stars";
 
 function App() {
   return (
-    <div style={{ height: "100vh", width: "100vw", position: "relative" }}>
-      <Canvas
-        style={{ background: "white", height: "100%", width: "100%" }}
-        camera={{ position: [5, 5, 5], fov: 60 }} // Optional: Set the camera position
-      >
-        <Experience />
-      </Canvas>
+    <div className='canvas bg'>
+      <div className='stars'>
+        <Canvas camera={{ position: [0, 0, 1], fov: 60 }}>
+          <Stars />
+        </Canvas>
+      </div>
+
+      <div className='experience'>
+        <Canvas
+          camera={{ position: [5, 5, 5], fov: 60 }} // Optional: Set the camera position
+        >
+          <Experience />
+        </Canvas>
+      </div>
     </div>
   );
 }
