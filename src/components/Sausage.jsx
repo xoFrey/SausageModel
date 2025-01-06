@@ -17,8 +17,6 @@ export function Sausage(props) {
     <group
       ref={ref}
       {...props}
-      position={[-5, 3, 2]}
-      rotation={[-0.2, 30, 0]}
       dispose={null}>
       <OrthographicCamera
         makeDefault={false}
