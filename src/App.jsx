@@ -44,12 +44,12 @@ function App() {
   };
   return (
     <>
-      <Navbar
+      {/* <Navbar
         isActive={isActive}
         setIsActive={setIsActive}
         setIsClicked={setIsClicked}
         isClicked={isClicked}
-      />
+      /> */}
       <div className='canvas'>
         <div className='stars'>
           <Canvas camera={{ position: [0, 0, 1], fov: 60 }}>
