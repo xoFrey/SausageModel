@@ -31,7 +31,7 @@ nav p {
   z-index: 5;
 }
 
-.experience,
+.sausage,
 .ghost {
   position: absolute;
   width: 100vw;
@@ -41,25 +41,40 @@ nav p {
   z-index: 2;
 }
 
-.experience {
+.sausageEnterFromLeft,
+.ghostEnterFromLeft {
   animation: slideInLeft 1s;
 }
 
-.ghost {
-  animation: slideInLeft 1s;
-}
-
-.ghostExit {
+.ghostExitToRight,
+.sausageExitToRight {
   animation: slideOutRight 2s ease;
 }
 
-.sausageExit {
-  animation: slideOutRight 2s ease;
+.sausageEnterFromRight,
+.ghostEnterFromRight {
+  animation: slideInRight 1s;
+}
+
+.ghostExitToLeft,
+.sausageExitToLeft {
+  animation: slideOutLeft 2s ease;
 }
 
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
@@ -75,6 +90,17 @@ nav p {
   }
   100% {
     transform: translateX(150%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150%);
     opacity: 0;
   }
 }

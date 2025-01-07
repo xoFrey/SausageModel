@@ -24,26 +24,6 @@ const Experience = () => {
 
   return (
     <>
-      <ambientLight intensity={0.5} />
-      <spotLight
-        intensity={100}
-        distance={100}
-        position={[7, 3, 7]}
-      />
-      <spotLight
-        intensity={50}
-        distance={10}
-        angle={0.5}
-        position={[-5, 3, -4]}
-      />
-
-      <OrbitControls
-        enablePan={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-        enableZoom={false}
-      />
-
       <Sausage />
     </>
   );

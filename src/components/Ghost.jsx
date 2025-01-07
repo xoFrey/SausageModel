@@ -17,6 +17,7 @@ export function Ghost(props) {
 
   return (
     <group
+      scale={3}
       ref={ref}
       {...props}
       dispose={null}>
