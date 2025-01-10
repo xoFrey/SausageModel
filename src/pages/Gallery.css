@@ -1,13 +1,17 @@
-.gallery {
-  border: 3px solid red;
-  width: 100vw;
+.container {
   height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+}
 img {
   max-width: 100%;
 }
@@ -16,7 +20,15 @@ img {
   color: white;
   z-index: 4;
   cursor: move;
-  border: 3px solid rgb(94, 255, 0);
   display: inline-block;
-  width: 13vw;
+}
+
+.icons {
+  width: 100px;
+}
+
+.shoppingcart {
+  padding-top: 400px;
+  z-index: 10;
+  pointer-events: none;
 }
